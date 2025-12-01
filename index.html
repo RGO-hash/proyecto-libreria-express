@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Express - Sistema de Gestión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-book"></i> Librería Express</h1>
+        <p>Sistema de Gestión Comercial - Base de Datos I</p>
+    </header>
+
+    <main class="container">
+        <section class="project-info">
+            <h2>📋 Proyecto Final - Base de Datos I</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3><i class="fas fa-database"></i> Base de Datos</h3>
+                    <ul>
+                        <li>9 Tablas normalizadas</li>
+                        <li>Procedimientos almacenados</li>
+                        <li>Triggers para control de stock</li>
+                        <li>Datos de prueba incluidos</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-store"></i> Funcionalidades</h3>
+                    <ul>
+                        <li>Gestión de productos</li>
+                        <li>Control de inventario</li>
+                        <li>Ventas y facturación</li>
+                        <li>Reportes estadísticos</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-laptop-code"></i> Tecnologías</h3>
+                    <ul>
+                        <li>SQL Server</li>
+                        <li>HTML5 / CSS3 / JavaScript</li>
+                        <li>GitHub Pages</li>
+                        <li>Modelo Entidad-Relación</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="database-preview">
+            <h2>🏗️ Estructura de la Base de Datos</h2>
+            <div class="tables-grid">
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> CATEGORIA</h4>
+                    <p>Almacena las categorías de productos</p>
+                    <code>id_categoria, nombre, descripcion</code>
+                </div>
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> PRODUCTO</h4>
+                    <p>Catálogo completo de productos</p>
+                    <code>id_producto, nombre, precio, stock</code>
+                </div>
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> CLIENTE</h4>
+                    <p>Registro de clientes</p>
+                    <code>id_cliente, nombre, documento, tipo</code>
+                </div>
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> EMPLEADO</h4>
+                    <p>Personal de la librería</p>
+                    <code>id_empleado, nombre, cargo, salario</code>
+                </div>
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> VENTA</h4>
+                    <p>Registro de ventas</p>
+                    <code>id_venta, fecha, total, cliente_id</code>
+                </div>
+                <div class="table-card">
+                    <h4><i class="fas fa-table"></i> DETALLE_VENTA</h4>
+                    <p>Detalles de cada venta</p>
+                    <code>id_detalle, venta_id, producto_id, cantidad</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="simulation">
+            <h2>🎮 Simulación del Sistema</h2>
+            <div class="filters">
+                <input type="text" id="search" placeholder="Buscar producto..." class="search-input">
+                <select id="category-filter" class="filter-select">
+                    <option value="all">Todas las categorías</option>
+                </select>
+            </div>
+            <div id="productos-container" class="products-grid">
+                <!-- Productos cargados dinámicamente -->
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span id="total-productos">0</span>
+                    <p>Productos Totales</p>
+                </div>
+                <div class="stat">
+                    <span id="stock-bajo">0</span>
+                    <p>Stock Bajo</p>
+                </div>
+                <div class="stat">
+                    <span id="categorias">0</span>
+                    <p>Categorías</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <h2>🚀 Cómo Ejecutar el Proyecto</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. Base de Datos</h3>
+                    <ol>
+                        <li>Abrir SQL Server Management Studio</li>
+                        <li>Ejecutar scripts en orden (01 a 06)</li>
+                        <li>Verificar con: <code>SELECT * FROM PRODUCTO</code></li>
+                    </ol>
+                </div>
+                <div class="step">
+                    <h3>2. Página Web</h3>
+                    <ol>
+                        <li>Abrir <code>index.html</code> en navegador</li>
+                        <li>O ver online en GitHub Pages</li>
+                        <li>Probar filtros y funcionalidades</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>👨‍🎓 <strong>Estudiante:</strong> [Tu Nombre]</p>
+        <p>📚 <strong>Materia:</strong> Base de Datos I</p>
+        <p>📅 <strong>Fecha:</strong> [Fecha de Entrega]</p>
+        <div class="links">
+            <a href="../database/" class="btn"><i class="fas fa-database"></i> Ver Scripts SQL</a>
+            <a href="https://github.com/tuusuario/proyecto-libreria-express" class="btn">
+                <i class="fab fa-github"></i> Repositorio GitHub
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
